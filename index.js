@@ -28,7 +28,7 @@ app.use('/vendor', vendorRoutes);
 app.use('/firm', firmRoute);
 app.use('/product', productRoutes);
 
-app.use('/home', (req, res) => {
+app.use('/', (req, res) => {
   res.send("<h1>Welcome to Suby</h1>");
 });
 
@@ -42,6 +42,4 @@ app.listen(PORT, () => {
   console.log(`Server created and running at ${PORT}`);
 });
 
-app.use('/',(res,req)=>{
-    res.send("<h1>Welcome to SUBY")
-})
+
