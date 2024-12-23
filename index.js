@@ -5,14 +5,14 @@ const vendorRoutes = require('./routes/vendorRoutes');
 const bodyParser = require('body-parser');
 const firmRoute = require('./routes/firmRoutes');
 const productRoutes = require('./routes/productRoutes');
-// const cors = require('cors');
+const cors = require('cors');
 const path = require('path')
 
 const app = express();
 const PORT = process.env.PORT || 4000;
 
 dotenv.config();
-// app.use(cors())
+app.use(cors())
 
 // Database Connection
 mongoose.connect(process.env.MONGO_URI)

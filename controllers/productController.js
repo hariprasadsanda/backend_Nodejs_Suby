@@ -2,6 +2,7 @@
 const Product = require('../models/Product');
 const multer= require('multer')
 const Firm = require('../models/Firm')
+const path= require('path')
 
 
 // Configure Multer Storage
@@ -67,7 +68,7 @@ const getProductsByFirm= async(req,res)=>{
 
 const delectProductById = async(req,res)=>{
     try {
-        const productId = res. params.productId;
+        const productId = req.params.productId;
 
         const deletedProduct = await Product.findByIdAndDelete(productId);
         if(!deletedProduct){

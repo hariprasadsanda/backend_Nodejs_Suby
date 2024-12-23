@@ -25,7 +25,7 @@ const productSchema = new mongoose.Schema({
         }
     ],
     bestseller:{
-        type:String
+        type:Boolean
     },
     firm:{
         type:mongoose.Schema.Types.ObjectId,
