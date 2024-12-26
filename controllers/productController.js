@@ -67,7 +67,7 @@ const getProductsByFirm= async(req,res)=>{
 }
 
 const delectProductById = async(req,res)=>{
-    try {
+    try { 
         const productId = req.params.productId;
 
         const deletedProduct = await Product.findByIdAndDelete(productId);
